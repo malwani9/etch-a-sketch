@@ -1,15 +1,17 @@
 body{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 10px;
 }
 
 #container{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  width: 850px;
-  height: 850px;
+  width: 750px;
+  height: 750px;
   background-color: #E5E4E2;
 }
 
@@ -31,4 +33,9 @@ body{
 
     cursor: cell;
     opacity: 1;
+}
+
+#grid-button{
+    width: 180px;
+    height: 40px;
 }
