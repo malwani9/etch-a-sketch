@@ -23,17 +23,17 @@ body{
 
 .pixel{
     flex-grow: 1;
-    background-color: #7f7f7f;
+    /*background-color: #7f7f7f;*/
     border: 1px solid #DDDDDD;
     opacity: 0.4;
     transition: 0.3s;
 }
 
-.pixel:hover{
+/* .pixel:hover{
 
     cursor: cell;
     opacity: 1;
-}
+} */
 
 #grid-button{
     width: 180px;
