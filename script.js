@@ -8,6 +8,7 @@ etchASketch();
 
 const cells = document.getElementsByClassName("pixel");
 assignRandBackgroundColor();
+//increaseOpacity();
 
 gridButton.addEventListener("click", () => {
   userRows = prompt("Enter number for grid rows: ", "");
@@ -22,6 +23,7 @@ gridButton.addEventListener("click", () => {
   deleteGridPixels();
   etchASketch(userRows, userColumns);
   assignRandBackgroundColor();
+  //increaseOpacity();
 });
 
 function deleteGridPixels() {
@@ -51,7 +53,22 @@ function randomRGP() {
   const randomColor = Math.floor(Math.random() * 16777215).toString(16);
   const hex = "#" + randomColor;
   return hex;
-}
+};
+
+// TODO: fix increase opacity feature
+// failed attempt to increase opacity 
+/* function increaseOpacity(){
+    for (let i = 0; i < cells.length; i++) {
+        let increase = parseFloat(cells[i].style.opacity);
+        console.log(increase);
+        cells[i].addEventListener("mouseover", () => {
+            increase += 0.1;
+            cells[i].style.opacity += increase
+            console.log(increase);
+            console.log(parseFloat(cells[i].style.opacity));
+        });
+      }
+}; */
 
 function assignRandBackgroundColor() {
   for (let i = 0; i < cells.length; i++) {
@@ -59,4 +76,4 @@ function assignRandBackgroundColor() {
       cells[i].style.backgroundColor = randomRGP();
     });
   }
-}
+};
